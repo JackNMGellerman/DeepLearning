@@ -89,29 +89,4 @@ for i in xrange(60000):#epochs
 print "Output layer After Training:"
 print outputLayer
 ##classify some other example
-'''something akin to forward pass as below...
-now the weights are no longer just random initializations
-layerZero = X_input
-hiddenLayerOne = nonLinearFunction(np.dot(layerZero, allWeights[0]),3)
-hiddenLayers[0] = hiddenLayerOne
-for g in range(1, hiddenLayersNumber):
-    hiddenLayers[g] = nonLinearFunction(np.dot(hiddenLayers[g-1], allWeights[g]),3)
-outputLayer = nonLinearFunction(np.dot(hiddenLayers[len(hiddenLayers)-1], allWeights[len(allWeights)-1]),3)
 
-    
-layerZero = X #column refers to a node, so three nodes in input layer (to be used for every example sample)
-    #compute the dot product,  forward pass
-    hiddenLayerOne = nonLinearFunction(np.dot(layerZero,allWeights[0]),3)
-    hiddenLayers[0] = hiddenLayerOne
-    for z in range(1,hiddenLayersNumber): 
-        #print(i)   
-        hiddenLayers[z] = nonLinearFunction(np.dot(hiddenLayers[z-1],allWeights[z]),3)
-    #print(len(hiddenLayers) -1)
-    outputLayer = nonLinearFunction(np.dot(hiddenLayers[len(hiddenLayers) -1],allWeights[len(allWeights)-1]),3)
-    overallError = outputLayer - y
-
-
-
-
-
-'''
